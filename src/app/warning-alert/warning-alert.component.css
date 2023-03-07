@@ -1,0 +1,6 @@
+.warning {
+    color: yellow;
+    background-color: rgb(128, 137, 0);
+    padding: 2rem;
+    border: 2px yellow solid;
+}
