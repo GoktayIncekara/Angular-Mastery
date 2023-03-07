@@ -8,7 +8,10 @@ import { Component } from '@angular/core';
 export class ServersComponent {
   disabled = false;
   serverCreationStatus = "No server was created!";
-  serverName = "";
+  serverName = "Initial Name";
+  userName="";
+  showPassword = false;
+  clicks: Date[] = [];
 
   constructor() {
     setTimeout(() => {
@@ -17,7 +20,17 @@ export class ServersComponent {
   }
 
   onCreateServer() {
-    this.serverCreationStatus = "Server was created!";
+    this.serverCreationStatus = `Server was created! Server name is ${this.serverName}`;
+  }
+
+  resetUserName() {
+    this.userName ="";
+  }
+
+  handleClick() {
+    this.showPassword = !this.showPassword;
+    this.clicks.push(new Date());
+    
   }
 
   /*
@@ -25,5 +38,5 @@ export class ServersComponent {
     this.serverName = (<HTMLInputElement>event.target).value;
   }
   */
- 
+
 }
