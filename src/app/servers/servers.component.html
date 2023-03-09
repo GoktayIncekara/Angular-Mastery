@@ -15,3 +15,6 @@
 <h2 [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : ''}" [ngClass]="{white : i>= 4}" *ngFor="let click of clicks; let i = index">{{click}}</h2>
 <app-server></app-server>
 <app-server></app-server>
+<app-game-control (increment)="createComponent($event)"></app-game-control>
+<app-odd *ngFor="let num of oddNumbers" [num]="num"></app-odd>
+<app-even *ngFor="let num of evenNumbers" [num]="num"></app-even>

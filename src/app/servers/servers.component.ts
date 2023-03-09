@@ -12,6 +12,8 @@ export class ServersComponent {
   userName="";
   showPassword = false;
   clicks: Date[] = [];
+  oddNumbers: number[] = [];
+  evenNumbers: number[] = [];
 
   constructor() {
     setTimeout(() => {
@@ -39,4 +41,11 @@ export class ServersComponent {
   }
   */
 
+  createComponent(num: number) {
+    if (num % 2) {
+      this.oddNumbers.push(num);
+    } else {
+      this.evenNumbers.push(num);
+    }
+  }
 }
